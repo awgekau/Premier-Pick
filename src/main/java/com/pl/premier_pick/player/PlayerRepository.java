@@ -6,9 +6,8 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface PlayerRepository extends JpaRepository <Player, String> {
-    void deleteByName(String playerName);
+public interface PlayerRepository extends JpaRepository<Player, String> {
+    void deleteByPlayerName(String playerName);  // Use camelCase
 
-
-    Optional<Player> findByName(String name);
+    Optional<Player> findByPlayerName(String playerName);  // Use camelCase
 }
