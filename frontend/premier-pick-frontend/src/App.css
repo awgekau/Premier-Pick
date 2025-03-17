@@ -1,0 +1,118 @@
+/* Center the container */
+.container {
+	text-align: center;
+	padding: 20px;
+	font-family: 'Arial', sans-serif;
+	background-color: #f8f9fa; /* Light gray background */
+	min-height: 100vh;
+}
+
+/* Title Styling */
+h1 {
+	color: #222222;
+	margin-bottom: 20px;
+}
+
+/* Scrollable table container */
+.table-wrapper {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Scrollable table */
+.table-container {
+	overflow-x: auto;
+	width: 80%;
+	scroll-behavior: smooth;
+	white-space: nowrap;
+}
+
+/* Navigation buttons */
+.scroll-button {
+	background-color: #37003c; /* Premier League purple */
+	color: white;
+	border: none;
+	padding: 10px 15px;
+	cursor: pointer;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 100;
+	border-radius: 50%;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Positioning arrows */
+.left {
+	left: 5%;
+}
+.right {
+	right: 5%;
+}
+
+/* Table styling */
+.players-table {
+	width: 100%;
+	min-width: 1000px; /* Ensures it doesn't shrink too much */
+	border-collapse: collapse;
+	background: white;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table header */
+.players-table thead {
+	background: linear-gradient(to right, #37003c, #50006b); /* Dark purple */
+	color: white;
+	text-transform: uppercase;
+	font-size: 16px;
+	text-align: center; /* Ensures header text is centered */
+}
+
+/* Table header text */
+.players-table th {
+	padding: 15px;
+	text-align: center; /* Centering column headers */
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+/* Table rows */
+.players-table td {
+	padding: 12px 15px;
+	border-bottom: 1px solid #e6e6e6;
+	font-size: 15px;
+	color: #222222;
+	text-align: center; /* Centering all text */
+	white-space: nowrap; /* Prevents text from wrapping */
+}
+
+/* Alternate row colors */
+.players-table tbody tr:nth-child(even) {
+	background-color: #f3f3f3;
+}
+
+/* Hover effect */
+.players-table tbody tr:hover {
+	background-color: #ebebeb;
+}
+
+/* Responsive table */
+@media screen and (max-width: 768px) {
+	.table-container {
+		width: 100%;
+	}
+	.players-table {
+		font-size: 12px;
+	}
+	.players-table th,
+	.players-table td {
+		padding: 8px;
+	}
+}
